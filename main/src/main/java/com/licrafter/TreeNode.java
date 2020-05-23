@@ -5,12 +5,12 @@ package com.licrafter;
  * <p>
  * Gmail: shellljx@gmail.com
  */
-public class BinaryTreeNode {
+public class TreeNode {
     public int val;
-    public BinaryTreeNode left;
-    public BinaryTreeNode right;
+    public TreeNode left;
+    public TreeNode right;
 
-    public BinaryTreeNode(int val) {
+    public TreeNode(int val) {
         this.val = val;
     }
 }

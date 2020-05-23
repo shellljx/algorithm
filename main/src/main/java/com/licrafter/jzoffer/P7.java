@@ -1,6 +1,6 @@
 package com.licrafter.jzoffer;
 
-import com.licrafter.BinaryTreeNode;
+import com.licrafter.TreeNode;
 
 /**
  * Created by shell on 2020/5/23.
@@ -9,17 +9,17 @@ import com.licrafter.BinaryTreeNode;
  */
 public class P7 {
 
-    public BinaryTreeNode reConstructBinaryTree(int[] pre, int[] in) {
+    public TreeNode reConstructBinaryTree(int[] pre, int[] in) {
         return reConstruct(pre, 0, pre.length - 1, in, 0, in.length - 1);
     }
 
-    public BinaryTreeNode reConstruct(int[] pre, int preStart, int preEnd, int[] in, int inStart, int inEnd) {
+    public TreeNode reConstruct(int[] pre, int preStart, int preEnd, int[] in, int inStart, int inEnd) {
 
         if (preStart > preEnd || inStart > inEnd) {
             return null;
         }
 
-        BinaryTreeNode root = new BinaryTreeNode(pre[preStart]);
+        TreeNode root = new TreeNode(pre[preStart]);
 
         for (int index = inStart; index <= inEnd; index++) {
             if (in[index] == root.val) {
